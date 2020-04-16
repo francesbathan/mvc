@@ -19,10 +19,12 @@ public class BookService {
     public List<Book> allBooks() {
         return bookRepository.findAll();
     }
+    
     // creates a book
     public Book createBook(Book b) {
         return bookRepository.save(b);
     }
+    
     // retrieves a book
     public Book findBook(Long id) {
         Optional<Book> optionalBook = bookRepository.findById(id);
@@ -32,4 +34,30 @@ public class BookService {
             return null;
         }
     }
+    
+    //updates a book
+//    public Book updateBook(Book b) {
+//    	return bookRepository.save(b);
+//    }
+
+    public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+       	Optional <Book> editBook = bookRepository.findById(id);
+    	if(editBook != null && editBook.isPresent()) {
+    		editBook.get().setTitle(title);
+    		editBook.get().setDescription(desc);
+    		editBook.get().setLanguage(lang);
+    		editBook.get().setNumberOfPages(numOfPages);
+    		bookRepository.save(editBook.get());
+    		return editBook.get();
+    	}
+    	return null;   
+    	
+    }
+    
+    
+    // deletes a book
+    public void deleteBook(Long id) {
+    	bookRepository.deleteById(id);
+    }
+    
 }
