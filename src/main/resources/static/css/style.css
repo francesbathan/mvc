@@ -2,7 +2,7 @@
 	font-family: Montserrat;
 	margin: 2vh 2vw;
 }
-thead, tbody {
+thead, tbody, p {
 	font-size: 10pt;
 }
 th, td {
@@ -19,4 +19,22 @@ a:hover {
 }
 .newbook {
 	margin: 5vh 1vw;
+}
+.btn {
+	background-color: teal;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	padding: 5px 10px;
+	font-family: Montserrat;
+	font-size: 9pt;
+	margin-top: 2vh;
+}
+.btn:hover {
+	background-color: #214B53;
+	color: #B2DFDB;
+}
+.line {
+	color: lightgray;
 }
