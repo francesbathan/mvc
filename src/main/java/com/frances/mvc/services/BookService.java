@@ -3,6 +3,8 @@ package com.frances.mvc.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import com.frances.mvc.models.Book;
 import com.frances.mvc.repositories.BookRepository;
 import org.springframework.stereotype.Service;
@@ -36,28 +38,29 @@ public class BookService {
     }
     
     //updates a book
-//    public Book updateBook(Book b) {
-//    	return bookRepository.save(b);
-//    }
-
+   
+    public Book updateBook(Book b) {
+    	return bookRepository.save(b);
+    }
+    
     public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
-       	Optional <Book> editBook = bookRepository.findById(id);
-    	if(editBook != null && editBook.isPresent()) {
+    	Optional <Book> editBook = bookRepository.findById(id);
+    	if(editBook != null) {
     		editBook.get().setTitle(title);
     		editBook.get().setDescription(desc);
     		editBook.get().setLanguage(lang);
     		editBook.get().setNumberOfPages(numOfPages);
-    		bookRepository.save(editBook.get());
+
     		return editBook.get();
     	}
-    	return null;   
-    	
+    	return null;        
     }
-    
+  
     
     // deletes a book
     public void deleteBook(Long id) {
     	bookRepository.deleteById(id);
     }
+
     
 }
