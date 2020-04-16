@@ -1,0 +1,22 @@
+.container {
+	font-family: Montserrat;
+	margin: 2vh 2vw;
+}
+thead, tbody {
+	font-size: 10pt;
+}
+th, td {
+	padding: 5px 10px;
+	text-align: left;
+}
+a {
+	text-decoration: none !important;
+	color: teal;
+	font-size: 10pt;
+}
+a:hover {
+	color: #214B53;
+}
+.newbook {
+	margin: 5vh 1vw;
+}

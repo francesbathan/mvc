@@ -1,0 +1,38 @@
+.container {
+	font-family: Montserrat;
+	margin: 2vh 2vw;
+}
+form {
+	font-size: 10pt;
+}
+.label {
+	display: block;
+}
+.input {
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	margin-top: 1vh;
+	padding: 3px 2px 3px 5px;
+	outline: none;
+	font-family: Montserrat;
+	width: 15vw;
+}
+.errormsg {
+	color: red;
+	font-size: 8pt;
+	display: block;
+}
+.btn {
+	background-color: teal;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	padding: 5px 10px;
+	font-family: Montserrat;
+	font-size: 9pt;
+}
+.btn:hover {
+	background-color: #214B53;
+	color: #B2DFDB;
+}
